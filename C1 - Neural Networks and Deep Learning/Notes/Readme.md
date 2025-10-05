@@ -143,13 +143,13 @@ This is the first course of the deep learning specialization at [Coursera](https
 
 ### Logistic regression cost function
 
-- First loss function would be the square root error:  `L(y',y) = 1/2 (y' - y)^2`
+- First loss function would be the square root error:  `L(y',y) = 1/2 (y' - y)^2` that y' is `what is chanse X is a cat`
   - But we won't use this notation because it leads us to optimization problem which is non convex, means it contains local optimum points.
 - This is the function that we will use: `L(y',y) = - (y*log(y') + (1-y)*log(1-y'))`
 - To explain the last function lets see:
   - if `y = 1` ==> `L(y',1) = -log(y')`  ==> we want `y'` to be the largest   ==> `y`' biggest value is 1
   - if `y = 0` ==> `L(y',0) = -log(1-y')` ==> we want `1-y'` to be the largest ==> `y'` to be smaller as possible because it can only has 1 value.
-- Then the Cost function will be: `J(w,b) = (1/m) * Sum(L(y'[i],y[i]))`
+- Then the Cost function will be(`to train w and b you need to define cost function`): `J(w,b) = (1/m) * Sum(L(y'[i],y[i]))`
 - The loss function computes the error for a single training example; the cost function is the average of the loss functions of the entire training set.
 
 ### Gradient Descent
@@ -177,14 +177,7 @@ This is the first course of the deep learning specialization at [Coursera](https
   - if `a = 2` then `f(a) = 6`
   - if we move a a little bit `a = 2.001` then `f(a) = 6.003` means that we multiplied the derivative (Slope) to the moved area and added it to the last result.
 
-### More Derivatives examples
 
-- `f(a) = a^2`  ==> `d(f(a))/d(a) = 2a`
-  - `a = 2`  ==> `f(a) = 4`
-  - `a = 2.0001` ==> `f(a) = 4.0004` approx.
-- `f(a) = a^3`  ==> `d(f(a))/d(a) = 3a^2`
-- `f(a) = log(a)`  ==> `d(f(a))/d(a) = 1/a`
-- To conclude, Derivative is the slope and slope is different in different points in the function thats why the derivative is a function.
 
 ### Computation graph
 
